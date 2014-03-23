@@ -12,15 +12,15 @@ installcask google-chrome-canary
 installcask imagealpha
 installcask imageoptim
 installcask iterm2
-installcask macvim
-installcask miro-video-converter
-installcask opera
-installcask opera-developer
-installcask opera-next
+# installcask macvim
+# installcask miro-video-converter
+# installcask opera
+# installcask opera-developer
+# installcask opera-next
 installcask sublime-text
 installcask the-unarchiver
-installcask tor-browser
-installcask transmission
-installcask ukelele
-installcask virtualbox
-installcask vlc
+# installcask tor-browser
+# installcask transmission
+# installcask ukelele
+# installcask virtualbox
+# installcask vlc

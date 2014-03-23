@@ -14,6 +14,22 @@ alias p="cd ~/projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
+alias copyPath="pwd | sed 's/ /\\ /' | pbcopy"
+
+#Git
+alias gs="git stash"
+alias gc="git commit"
+alias ga="git add"
+alias gst="git status"
+alias gfap="git fetch --all --prune"
+alias gco="git checkout"
+
+#Compass
+alias cw="compass watch"
+
+#Xcode Simulator
+alias simulator="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
