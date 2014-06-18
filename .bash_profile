@@ -1,12 +1,19 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
-
+export PATH="/usr/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-# export PATH="~/node_modules/.bin:$PATH"
 export PATH="bin:/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="$PATH:/usr/local/git/bin:/usr/local/share/npm/bin"
-export PATH="/usr/local/share/npm/bin:$PATH"
-# export PATH="~/.node/bin:$PATH"
+export PATH="$HOME/.node/bin:$PATH"
+export PATH="/usr/local/bin/npm:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
+export PATH="/usr/local/bin/node:$PATH"
+
+# For reference only:
+# export PATH="$PATH:~/.node/bin"
+# export PATH="~/node_modules/.bin:$PATH"
+# export PATH="$PATH:/usr/local/git/bin:/usr/local/share/npm/bin"
+# export PATH="/usr/local/share/npm/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
