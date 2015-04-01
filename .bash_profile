@@ -9,6 +9,8 @@ export PATH="/usr/local/bin:$PATH"
 
 export PATH="/usr/local/bin/node:$PATH"
 
+export PATH=/Applications/MAMP/Library/bin:$PATH
+
 # For reference only:
 # export PATH="$PATH:~/.node/bin"
 # export PATH="~/node_modules/.bin:$PATH"
