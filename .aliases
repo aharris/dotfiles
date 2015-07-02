@@ -16,6 +16,9 @@ alias h="history"
 alias j="jobs"
 alias copyPath="pwd | sed 's/ /\\ /' | pbcopy"
 
+#FUCK
+alias fuck='eval $(thefuck $(fc -ln -1))'
+
 #Git
 alias gs="git stash"
 alias gc="git commit"
