@@ -11,6 +11,10 @@ export PATH="/usr/local/bin/node:$PATH"
 
 export PATH=/Applications/MAMP/Library/bin:$PATH
 
+export PATH=$PATH:/Dropbox/development/didit-cli-client
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+
 # For reference only:
 # export PATH="$PATH:~/.node/bin"
 # export PATH="~/node_modules/.bin:$PATH"
