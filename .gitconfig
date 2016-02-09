@@ -154,6 +154,10 @@
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
+[user]
+ name = Ashton Harris
+ email = aharris@intuitivecompany.com
+
 # URL shorthands
 
 [url "git@github.com:"]
