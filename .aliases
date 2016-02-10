@@ -18,6 +18,8 @@ alias copyPath="pwd | sed 's/ /\\ /' | pbcopy"
 
 alias updateDotFiles="set -- -f; source bootstrap.sh"
 
+alias maxUlimit="sudo launchctl limit maxfiles 16384 16384 && ulimit -n 16384"
+
 #FUCK
 alias fuck='eval $(thefuck $(fc -ln -1))'
 
