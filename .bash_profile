@@ -2,8 +2,8 @@
 export PATH="$HOME/bin:$PATH";
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 
-export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
