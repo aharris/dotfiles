@@ -84,7 +84,7 @@
 [core]
 
 	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/aharris/.gitignore
 	attributesfile = ~/.gitattributes
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
@@ -95,7 +95,7 @@
 	# Make `git rebase` safer on OS X
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false
-	editor = subl -w
+	editor = code --wait
 
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
@@ -127,9 +127,9 @@
 	untracked = cyan
 
 [diff]
-
-	# Detect copies as well as renames
-	renames = copies
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 
 [diff "bin"]
 	# Use `hexdump` to diff binary files
@@ -144,6 +144,7 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	tool = Kaleidoscope
 
 [push]
 
@@ -155,8 +156,8 @@
 	followTags = true
 
 [user]
- name = Ashton Harris
- email = aharris@intuitivecompany.com
+	name = Ashton Harris
+	email = ashton.harris@ey.com
 
 # URL shorthands
 
@@ -179,3 +180,27 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[commit]
+	template = /Users/aharris/.stCommitMsg
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main

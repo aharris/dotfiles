@@ -1,6 +1,17 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/share/python:$PATH
+export PATH="$PATH:/Users/aharris/.dotnet/tools"
+
+# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+# ANDROID
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export NVM_DIR="$HOME/.nvm"
   . "/usr/local/opt/nvm/nvm.sh"
@@ -50,3 +61,13 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+export PATH="/usr/local/sbin:$PATH"
+
+# Kill process running on port
+kp() {
+   lsof -i:$1
+}
+
+# Load rbenv automatically
+eval "$(rbenv init -)"
